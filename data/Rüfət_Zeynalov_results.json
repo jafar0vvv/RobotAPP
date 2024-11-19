@@ -1,0 +1,43 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "ZEYNALOV RÜFƏT ŞAİQ",
+            "daire_ve_unvani": "17 saylı Yasamal üçüncü seçki dairəsi\nÜnvan: YASAMAL RAYONU İNŞAATÇILAR PROSPEKTİ 12/26",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "21 saylı məntəqə\nUnvan: YASAMAL R., NİZAMİ KÜÇ. 23, 27 SAYLI UŞAQ BAĞÇASI",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "NİZAMİ KÜÇ., ev 29, 2"
+        }
+    ],
+    "emlak": {
+        "Ad": "RÜFƏT",
+        "Soyad": "ZEYNALOV",
+        "Ata Adı": "ŞAİQ OĞLU",
+        "Doğum Tarihi": "1996-03-02",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, YASAMAL RAYONU, NİZAMİ KÜÇƏSİ, EV 29, MƏNZİL 2",
+        "ŞV Seriyası ve Numarası": "AA2824098",
+        "FİN Kod": "63ZTC7Z"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "17",
+            "mentqenin_kodu": "21",
+            "secicinin_soyadi_adi": "ZEYNALOV RÜFƏT ŞAİQ",
+            "yasayis_yeri": "NİZAMİ KÜÇ., ev 29",
+            "tevellud": "1996"
+        },
+        {
+            "dairenin_kodu": "17",
+            "mentqenin_kodu": "21",
+            "secicinin_soyadi_adi": "ZEYNALOVA İRENA İQOREVNA",
+            "yasayis_yeri": "NİZAMİ KÜÇ., ev 29",
+            "tevellud": "1972"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

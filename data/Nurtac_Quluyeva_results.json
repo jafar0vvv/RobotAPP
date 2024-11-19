@@ -1,0 +1,50 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "QULUYEVA NURTAC RƏHMAN",
+            "daire_ve_unvani": "40 saylı Gəncə üçüncü seçki dairəsi\nÜnvan: GƏNCƏ ŞƏHƏRİ,ZƏRİFƏ ƏLİYEVA KÜÇ.BİNA 287 ƏSAS GİRİŞ III MƏRTƏBƏ",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "11 saylı məntəqə\nUnvan: GƏNCƏ Ş., AZƏRBAYCAN BAYRAĞI KÜÇ.İ DÖN. 300, 28 №-Lİ TAM ORTA MƏKTƏB",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "NİZAMİ IV DÖN., ev 3, 34"
+        }
+    ],
+    "emlak": {
+        "Ad": "NURTAC",
+        "Soyad": "QULUYEVA",
+        "Ata Adı": "RƏHMAN QIZI",
+        "Doğum Tarihi": "2005-01-27",
+        "Qeydiyyat Ünvanı": "GƏNCƏ ŞƏHƏRİ, KƏPƏZ RAYONU, XALİKOV KÜÇƏSİ 26",
+        "ŞV Seriyası ve Numarası": "AA2726013",
+        "FİN Kod": "7L1E1A7"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "40",
+            "mentqenin_kodu": "11",
+            "secicinin_soyadi_adi": "QULİYEV XƏYAL XƏLİL",
+            "yasayis_yeri": "NİZAMİ IV DÖN., ev 3",
+            "tevellud": "1983"
+        },
+        {
+            "dairenin_kodu": "40",
+            "mentqenin_kodu": "11",
+            "secicinin_soyadi_adi": "QULUYEV RƏHMAN ZİLFİ",
+            "yasayis_yeri": "NİZAMİ IV DÖN., ev 3",
+            "tevellud": "1969"
+        },
+        {
+            "dairenin_kodu": "40",
+            "mentqenin_kodu": "11",
+            "secicinin_soyadi_adi": "QULUYEVA NURTAC RƏHMAN",
+            "yasayis_yeri": "NİZAMİ IV DÖN., ev 3",
+            "tevellud": "2005"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

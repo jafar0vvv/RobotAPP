@@ -1,0 +1,253 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "HƏSƏNOVA RÖYA ABIŞ",
+            "daire_ve_unvani": "49 saylı Abşeron ikinci seçki dairəsi\nÜnvan: XIRDALAN ŞƏHƏRİ, NİZAMİ KÜÇƏSİ 7",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "30 saylı məntəqə\nUnvan: ABŞERON R., MASAZIR K., \"QURTULUŞ\" Y/M, 2 №-Lİ MƏNZİL İSTİSMAR SAHƏSİ",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "MASAZIR KƏNDİ"
+        }
+    ],
+    "emlak": {
+        "Ad": "RÖYA",
+        "Soyad": "HƏSƏNOVA",
+        "Ata Adı": "ABIŞ QIZI",
+        "Doğum Tarihi": "1996-07-27",
+        "Qeydiyyat Ünvanı": "ABŞERON RAYONU, MASAZIR Ə/D, MASAZIR KƏNDİ",
+        "ŞV Seriyası ve Numarası": "AA3121519",
+        "FİN Kod": "67P066N"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV AZAD HEYBƏTULLA",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1970"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV ƏLİBABA SƏDİ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1970"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV FAYIQ QƏNBƏR",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1964"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV HƏSƏN RÜSTƏM",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1963"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV İLHAM MİKAYIL",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1998"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV NAZİM MURAD",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1980"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV NEMƏT FİKRƏT",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1995"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV QİYAS SƏDİ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1973"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV RÜSTƏM ƏBÜLFƏZ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1997"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOV SADIQ HÜSEYN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1955"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA AYNURƏ VİLAYƏT",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1978"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA CEYRAN RÜSTƏM",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1961"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA ESMİRALDA ƏLİ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1945"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA FİRƏNGİZ CƏFƏROVNA",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1952"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA GÜLBƏYİM DUMAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1991"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA HÜSNİYYƏ BƏYLƏR",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1971"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA İRADƏ RİZVAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1992"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA MƏRİYƏM RZA",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1970"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA MƏTANƏT MALİK",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1971"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA NAİLƏ TELMAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1965"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA NƏRMİNƏ FUAD",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1993"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA RÖYA ABIŞ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1996"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA RUHƏNGİZ TOFİQ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1986"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA RUHİYYƏ NİZAMİ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1976"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA SƏBİNƏ İMAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1988"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA TAMARA YUNUS",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1966"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA TONYA QULU",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1959"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA TÜRKANƏ TOFİQ",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1986"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNOVA XANIMGÜL DURSUN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1952"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNQULİYEV ŞAHİN FİKRƏT",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1987"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNZADƏ ŞƏHRİYAR OSMAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1996"
+        },
+        {
+            "dairenin_kodu": "49",
+            "mentqenin_kodu": "30",
+            "secicinin_soyadi_adi": "HƏSƏNZADƏ TURAL OSMAN",
+            "yasayis_yeri": "MASAZIR KƏNDİ",
+            "tevellud": "1993"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

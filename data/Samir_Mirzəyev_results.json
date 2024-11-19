@@ -1,0 +1,28 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "MİRZƏYEV SAMİR RASİM",
+            "daire_ve_unvani": "33 saylı Xətai birinci seçki dairəsi\nÜnvan: XƏTAİ RAYONU QAÇAQ NƏBİ KÜÇƏSİ 10A",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "12 saylı məntəqə\nUnvan: XƏTAİ R., LÜTFİ ZADƏ KÜÇ. 6, 29 №-Lİ TAM ORTA MƏKTƏB",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "LÜTFİ ZADƏ KÜÇƏSİ, ev 10, 161"
+        }
+    ],
+    "emlak": {
+        "Ad": "SAMİR",
+        "Soyad": "MİRZƏYEV",
+        "Ata Adı": "RASİM OĞLU",
+        "Doğum Tarihi": "1998-02-24",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, XƏTAİ RAYONU, , TELNOV KÜÇƏSİ, EV 10, MƏNZİL 161",
+        "ŞV Seriyası ve Numarası": "AA4612838",
+        "FİN Kod": "690NZP4"
+    },
+    "aile_terkibi": [],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

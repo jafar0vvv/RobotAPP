@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axtarış Robotu</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: url('https://www.azercell.com/assets/images/about-us/values/1-5.gif') no-repeat center center;
+            background-size: cover;
+            overflow: auto;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            text-align: left;
+        }
+
+        h1 {
+            color: #4f46e5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #3730a3;
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .not-found {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Axtarış Robotunun Nəticələri</h1>
+
+        {% if emlak_info %}
+            <p><strong>Ad:</strong> {{ emlak_info.Ad|default:"-" }}</p>
+            <p><strong>Soyad:</strong> {{ emlak_info.Soyad|default:"-" }}</p>
+            <p><strong>Ata Adı:</strong> {{ emlak_info.Ata_Adı|default:"-" }}</p>
+            <p><strong>Doğum Tarihi:</strong> {{ emlak_info.Doğum_Tarihi|default:"-" }}</p>
+            <p><a href="https://e-emlak.gov.az/eemdk/services/mobile/login"><strong>Qeydiyyat Ünvanı:</strong> {{ emlak_info.Qeydiyyat_Unvanı|default:"-" }}</a></p>
+            <p><strong>ŞV Seriyası və Numarası:</strong> {{ emlak_info.ŞV_Seriyası_ve_Numarası|default:"-" }}</p>
+            <p><strong>FİN Kod:</strong> {{ emlak_info.FİN_Kod|default:"-" }}</p>
+        {% else %}
+            <p class="not-found">Əmlak məlumatları tapılmamışdır....</p>   
+        {% endif %}
+
+        <p><a href="https://www.taxes.gov.az/az/page/olkeden-getmek-huququnun-muveqqeti-mehdudlasdirilmasi"><strong>Ölkədən çıxış məhdudiyyəti:</strong> {{ taxes_info }}</a></p>
+        
+        <p><a href="https://www.taxes.gov.az"><strong>DIN:</strong> Cərimə haqqında məlumat tapılmamışdır.</a></p>
+        
+        {% if infocenter_info %}
+            {% for info in infocenter_info %}
+                <p><strong>Qeyd olunan Ünvanı:</strong> {{ info.secicinin_unvani }}</p>
+            {% endfor %}
+        {% else %}
+            <p class="not-found">Infocenter məlumatları tapılmamışdır...</p>
+        {% endif %}
+        
+        <p><a href="https://hesab.az/unregistered/#/direct-pay/telephone/generalrabita/parameters"><strong>Ev telefonunun qeydiyyatı:</strong></a></p>
+        <ul>
+            {% for name in abonent_names %}
+                <li>{{ name }}</li>
+            {% empty %}
+                <li class="not-found">Abonent adı tapılmamışdır...</li>
+            {% endfor %}
+        </ul>
+        
+        <p><a href="https://e-mehkeme.gov.az/Public/Cases"><strong>Məhkəmə işi haqqında:</strong> {{ mehkeme_result|default:"-" }}</a></p>
+        
+        <p><a href="https://sc.supremecourt.gov.az/job/search/1"><strong>Cinayət tərkibi:</strong> {{ cinayet_result | default:"-" }}</a></p>
+        
+        <p><a href="https://sc.supremecourt.gov.az/job/search/2-1"><strong>Inzibati tərkibi:</strong> {{ inzibati_result | default:"-" }}</a></p>
+        
+        <p><strong>Yaxın ətraf</strong></p>
+        <ul>
+            {% for member in aile_terkibi %}
+                <li>{{ member.secicinin_soyadi_adi }} - {{ member.yasayis_yeri }} - {{ member.tevellud }}</li>
+            {% empty %}
+                <li class="not-found">Yaxın ətraf tərkibi tapılmamışdır....</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "CABBAROVA LALƏ NATİQ",
+            "daire_ve_unvani": "35 saylı Xətai üçüncü seçki dairəsi\nÜnvan: XƏTAİ RAYONU, İZZƏT ORUCOVA KÜÇƏSİ 3 A",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "7 saylı məntəqə\nUnvan: XƏTAİ R., FƏZAİL BAYRAMOV KÜÇ. 10, ELŞƏN YƏHYAYEV AD. 56 №-Lİ TAM ORTA MƏKTƏB",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "S.ORUCOV, ev 17C, 487"
+        }
+    ],
+    "emlak": {
+        "Ad": "LALƏ",
+        "Soyad": "CABBAROVA",
+        "Ata Adı": "NATİQ QIZI",
+        "Doğum Tarihi": "1996-07-19",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, XƏTAİ RAYONU, SABİT ORUCOV KÜÇƏSİ, 1188 MƏHƏLLƏSİ, EV 17C, MƏNZİL 487",
+        "ŞV Seriyası ve Numarası": "AA4322451",
+        "FİN Kod": "65GTPCX"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABAROV NATİQ ASİF",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1968"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABAROV SAHİB NATİQ",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1999"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABBAROV ORXAN FAİQ",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1979"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABBAROVA LALƏ NATİQ",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1996"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABBAROVA MƏLAHƏT ŞƏRAFƏT",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1986"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABİRLİ RƏŞAD CABİR",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1983"
+        },
+        {
+            "dairenin_kodu": "35",
+            "mentqenin_kodu": "7",
+            "secicinin_soyadi_adi": "CABİRLİ VÜSALƏ POLAD",
+            "yasayis_yeri": "S.ORUCOV, ev 17C",
+            "tevellud": "1985"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

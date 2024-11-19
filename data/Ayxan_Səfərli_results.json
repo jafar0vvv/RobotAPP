@@ -1,0 +1,43 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "SƏFƏRLİ AYXAN XANLAR",
+            "daire_ve_unvani": "9 saylı Binəqədi ikinci seçki dairəsi\nÜnvan: BİNƏQƏDİ RAYONU M.Ə.RƏSULZADƏ QƏSƏBƏSİ MƏHƏRRƏM İBRAHİMOV 3",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "24 saylı məntəqə\nUnvan: BİNƏQƏDİ R., M.Ə.RƏSULZADƏ QƏS., M.MƏHƏMMƏDXAN KÜÇ. 14, SEÇKİ MƏNTƏQƏSİ",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "İ. DAĞISTANLI KÜÇ., ev 57, 2"
+        }
+    ],
+    "emlak": {
+        "Ad": "AYXAN",
+        "Soyad": "SƏFƏRLİ",
+        "Ata Adı": "XANLAR OĞLU",
+        "Doğum Tarihi": "2004-02-19",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, BİNƏQƏDİ RAYONU, 6-CI MİKRORAYON, İSMAYIL DAĞISTANLI KÜÇƏSİ, EV 57, MƏNZİL 2",
+        "ŞV Seriyası ve Numarası": "AA2829077",
+        "FİN Kod": "7VYL38F"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "9",
+            "mentqenin_kodu": "24",
+            "secicinin_soyadi_adi": "SƏFƏRLİ AYAN XANLAR",
+            "yasayis_yeri": "İ. DAĞISTANLI KÜÇ., ev 57",
+            "tevellud": "2006"
+        },
+        {
+            "dairenin_kodu": "9",
+            "mentqenin_kodu": "24",
+            "secicinin_soyadi_adi": "SƏFƏRLİ AYXAN XANLAR",
+            "yasayis_yeri": "İ. DAĞISTANLI KÜÇ., ev 57",
+            "tevellud": "2004"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

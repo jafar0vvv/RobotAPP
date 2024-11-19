@@ -1,0 +1,36 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "SALAYEVA ZƏRRİ ƏSGƏR",
+            "daire_ve_unvani": "24 saylı Nizami birinci seçki dairəsi\nÜnvan: NİZAMİ RAYONU R.RÜSTƏMOV KÜÇƏSİ 27 A",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "11 saylı məntəqə\nUnvan: NİZAMİ R., Ə.ƏZİMZADƏ KÜÇ. 16, XALİD QULİYEV AD. 62 №-Lİ MƏKTƏB-LİSEY",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "RÜSTƏMOV, ev 17, 26"
+        }
+    ],
+    "emlak": {
+        "Ad": "ZƏRRİ",
+        "Soyad": "SALAYEVA",
+        "Ata Adı": "ƏSGƏR QIZI",
+        "Doğum Tarihi": "1995-04-10",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, NİZAMİ RAYONU, R.RÜSTƏMOV KÜÇƏSİ, EV 17, MƏNZİL 26",
+        "ŞV Seriyası ve Numarası": "AA4622079",
+        "FİN Kod": "616KE5L"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "24",
+            "mentqenin_kodu": "11",
+            "secicinin_soyadi_adi": "SALAYEVA ZƏRRİ ƏSGƏR",
+            "yasayis_yeri": "RÜSTƏMOV, ev 17",
+            "tevellud": "1995"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

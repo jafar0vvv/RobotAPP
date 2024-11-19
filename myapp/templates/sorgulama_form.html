@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axtarış</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Modern bir yazı tipi */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Tam yükseklik */
+            background: url('https://www.azercell.com/assets/images/about-us/values/1-5.gif') no-repeat center center; /* Renkli HD arka plan */
+            background-size: cover; /* Tam örtme */
+            overflow: auto; /* Taşmaları göster */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Beyaz arka plan, daha az yarı saydam */
+            border-radius: 10px; /* Yuvarlatılmış köşeler */
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Hafif gölge */
+            padding: 30px; /* İç boşluk */
+            width: 300px; /* Küçük form boyutu */
+            text-align: center; /* Ortada metin */
+            position: relative; /* Konumlandırmayı ayarla */
+        }
+
+        .logo {
+            display: block; /* Bloğu ortala */
+            margin: 0 auto 20px; /* Üstte 0, altta 20px boşluk */
+            width: 80px; /* Logo genişliği, uygun boyut */
+            height: auto; /* Orantılı yükseklik */
+            border: none; /* Kenarlığı kaldır */
+            background-color: transparent; /* Arka plan rengini kaldır */
+        }
+
+        h1 {
+            color: #4f46e5; /* Mavi başlık rengi */
+            margin-bottom: 20px;
+            font-size: 24px; /* Başlık boyutu */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Dikey hizalama */
+            gap: 15px; /* Elemanlar arası boşluk */
+            justify-content: flex-start; /* Elemanları yukarı hizala */
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            padding: 12px; /* İç boşluk */
+            border: 1px solid #ccc; /* Gri kenarlık */
+            border-radius: 5px; /* Yuvarlatılmış kenarlar */
+            width: 100%; /* Tam genişlik */
+            box-sizing: border-box; /* Kenar boşluklarını dahil et */
+            font-size: 14px; /* Yazı boyutu */
+            transition: border-color 0.3s; /* Kenar geçişi */
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #4f46e5; /* Mavi kenar odaklandığında */
+            outline: none; /* Kenar dışı çerçeve yok */
+        }
+
+        button {
+            background-color: #4f46e5; /* Mavi buton rengi */
+            color: white; /* Buton yazı rengi */
+            border: none;
+            padding: 12px; /* Buton iç boşluğu */
+            border-radius: 5px; /* Yuvarlatılmış köşeler */
+            cursor: pointer;
+            font-size: 16px; /* Buton yazı boyutu */
+            transition: background-color 0.3s; /* Renk geçişi */
+            width: 100%; /* Tam genişlik */
+        }
+
+        button:hover {
+            background-color: #3730a3; /* Hover sırasında daha koyu mavi */
+        }
+
+        .error-list {
+            color: #d9534f; /* Kırmızı hata mesajı rengi */
+            margin: 15px 0;
+            list-style-type: none;
+            padding: 0;
+            text-align: left; /* Hata mesajlarını sola hizala */
+            font-size: 12px; /* Küçük yazı boyutu */
+        }
+
+        .hidden {
+            display: none; /* Görünmez hale getir */
+        }
+    </style>
+    <script>
+        function toggleFormVisibility() {
+            const yesOption = document.getElementById("yesOption");
+            const additionalFields = document.getElementById("additionalFields");
+            
+            if (yesOption.checked) {
+                additionalFields.classList.remove("hidden");
+            } else {
+                additionalFields.classList.add("hidden");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="https://download.logo.wine/logo/Azercell/Azercell-Logo.wine.png" alt="Azercell Logo" class="logo"> <!-- Azercell logosu -->
+        <h1>Axtarış Robotu</h1>
+        <form method="POST" action="{% url 'sorgulama' %}">
+            {% csrf_token %}
+
+            <div>
+                <label>Azərbaycan vətəndaşısınız?</label><br>
+                <input type="radio" id="yesOption" name="citizenship" value="yes" onclick="toggleFormVisibility()"> Bəli
+                <input type="radio" id="noOption" name="citizenship" value="no" onclick="toggleFormVisibility()"> Xeyr
+            </div>
+
+            <div id="additionalFields" class="hidden">
+                {{ form.as_p }}
+            </div>
+
+            {% if form.errors %}
+                <ul class="error-list">
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            <button type="submit">Axtar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "MİRZƏYEVA LALƏ RASİM",
+            "daire_ve_unvani": "19 saylı Nərimanov birinci seçki dairəsi\nÜnvan: NƏRİMANOV RAYONU TƏBRİZ KÜÇƏSİ 68",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "15 saylı məntəqə\nUnvan: NƏRİMANOV R., H. MƏMMƏDOV KÜÇ. 7, AZƏRBAYCAN YERÜSTÜ NƏQLİYYAT AGENTLİYİ",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "MİRZƏBALA MƏMMƏDZADƏ, ev 3, 13"
+        }
+    ],
+    "emlak": {
+        "Ad": "LALƏ",
+        "Soyad": "MİRZƏYEVA",
+        "Ata Adı": "RASİM QIZI",
+        "Doğum Tarihi": "1995-08-16",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, NƏRİMANOV RAYONU, MİRZƏBALA MƏMMƏDZADƏ KÜÇƏSİ, EV 3, MƏNZİL 13",
+        "ŞV Seriyası ve Numarası": "AA1710767",
+        "FİN Kod": "35062VJ"
+    },
+    "aile_terkibi": [],
+    "abonent_names": [
+        "MİRZƏYEVA ÜLVİYYƏ ABBAS QIZI"
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

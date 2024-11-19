@@ -1,0 +1,2 @@
+[console_scripts]
+geckodriver-path = pyautogecko.utils:print_geckodriver_path

@@ -1,0 +1,71 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "HƏSƏNOV ABBAS NAMİQ",
+            "daire_ve_unvani": "7 saylı Səbail seçki dairəsi\nÜnvan: SƏBAİL RAYONU, BÜL BÜL PROSPEKTİ 11",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "40 saylı məntəqə\nUnvan: SƏBAİL R., 3-CÜ MASSİV, 339 SAYLI KÖRPƏLƏR EVİ-UŞAQ BAĞÇASI",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "İ.AĞAYEV KÜÇƏSİ, ev O\\T"
+        }
+    ],
+    "emlak": {
+        "Ad": "ABBAS",
+        "Soyad": "HƏSƏNOV",
+        "Ata Adı": "NAMİQ OĞLU",
+        "Doğum Tarihi": "2002-09-29",
+        "Qeydiyyat Ünvanı": "BAKI şəh., SƏBAİL ray., S.İBRAHİMXƏLİLOV KÜÇ, ev.1A, m.4",
+        "ŞV Seriyası ve Numarası": "18587777",
+        "FİN Kod": "6ER4H32"
+    },
+    "aile_terkibi": [
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOV ABBAS NAMİQ",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev O\\T",
+            "tevellud": "2002"
+        },
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOV FƏRHAD ÇƏRKƏZ",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev O\\T",
+            "tevellud": "1958"
+        },
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOV NAMİQ İSLAM",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev O\\T",
+            "tevellud": "1975"
+        },
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOVA ELLADA İSLAM",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev O\\T",
+            "tevellud": "1976"
+        },
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOVA KÖNÜL AZƏR",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev 4",
+            "tevellud": "1988"
+        },
+        {
+            "dairenin_kodu": "7",
+            "mentqenin_kodu": "40",
+            "secicinin_soyadi_adi": "HƏSƏNOVA YELENA VLADİMİR",
+            "yasayis_yeri": "İ.AĞAYEV KÜÇƏSİ, ev O\\T",
+            "tevellud": "1962"
+        }
+    ],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

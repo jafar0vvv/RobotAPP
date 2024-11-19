@@ -1,0 +1,28 @@
+{
+    "mehkeme_result": [
+        {
+            "işin nömrəsi": "1(101)-2028/2024",
+            "daxil olma tarixi": "15.07.2024",
+            "işin növü": "1. Cinayət işi, məhkəməyədək sadələşdirilmiş icraatın materialları və ya xüsusi ittiham qaydasında şikayət",
+            "məhkəmənin adı": "Bakı Ağır Cinayətlər Məhkəməsi",
+            "hakim": "Vüqar Quliyev",
+            "işin baxılma vəziyyəti": "İş icraatdadır"
+        }
+    ],
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur",
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [],
+    "emlak": {
+        "Ad": "RÜFƏT",
+        "Soyad": "CƏFƏROV",
+        "Ata Adı": "RASİM OĞLU",
+        "Doğum Tarihi": "1998-05-24",
+        "Qeydiyyat Ünvanı": "BAKI ŞƏHƏRİ, YASAMAL RAYONU, HƏSƏNBƏY ZƏRDABİ PROSPEKTİ, EV 87, MƏNZİL 34",
+        "ŞV Seriyası ve Numarası": "AA3238563",
+        "FİN Kod": "29ME2QN"
+    },
+    "aile_terkibi": []
+}

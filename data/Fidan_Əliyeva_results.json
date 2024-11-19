@@ -1,0 +1,28 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "ƏLİYEVA FİDAN MƏTLƏB",
+            "daire_ve_unvani": "38 saylı Gəncə birinci seçki dairəsi\nÜnvan: GƏNCƏ ŞƏHƏRİ, YENİ GƏNCƏ QƏS. 28 MAY KÜÇ.BİNA 46, ƏSAS GİRİŞ III MƏRTƏBƏ",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "24 saylı məntəqə\nUnvan: GƏNCƏ Ş., İ.QAYIBOV KÜÇ. 14, GƏNСƏ TİBB KOLLEСİ",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "İ.QAYIBOV KÜÇƏSİ 3 DALAN, ev 5A"
+        }
+    ],
+    "emlak": {
+        "Ad": "FİDAN",
+        "Soyad": "ƏLİYEVA",
+        "Ata Adı": "MƏTLƏB QIZI",
+        "Doğum Tarihi": "2006-02-19",
+        "Qeydiyyat Ünvanı": "GƏNCƏ ŞƏHƏRİ, NİZAMİ RAYONU, İSMƏT QAYIBOV KÜÇƏSİ, DALAN 3, EV 5A, ",
+        "ŞV Seriyası ve Numarası": "AA3936883",
+        "FİN Kod": "7D3F0JA"
+    },
+    "aile_terkibi": [],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

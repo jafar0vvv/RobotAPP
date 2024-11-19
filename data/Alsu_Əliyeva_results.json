@@ -1,0 +1,28 @@
+{
+    "taxes": {
+        "info": "Sizin ölkədən getmək hüququnuz məhdudlaşdırılmayıb."
+    },
+    "infocenter": [
+        {
+            "ad_soyad_ata_adi": "ƏLİYEVA ALSU MƏTLƏB",
+            "daire_ve_unvani": "106 saylı Tovuz seçki dairəsi\nÜnvan: TOVUZ ŞƏHƏRİ, BƏHRAM ƏSGƏROV KÜÇƏSİ, 3",
+            "dairenin_marsrutu": "",
+            "mentqenin_unvani": "9 saylı məntəqə\nUnvan: TOVUZ Ş., İ.NƏSİMİ KÜÇ. 1, ADİL QASIMOV AD. TAM ORTA MƏKTƏB",
+            "mentqenin_marsrutu": "0",
+            "secicinin_unvani": "ABULBƏYLİ MƏH."
+        }
+    ],
+    "emlak": {
+        "Ad": "ALSU",
+        "Soyad": "ƏLİYEVA",
+        "Ata Adı": "MƏTLƏB QIZI",
+        "Doğum Tarihi": "2006-06-16",
+        "Qeydiyyat Ünvanı": "TOVUZ RAYONU, TOVUZ ŞƏHƏRİ, M.Ə.RƏSULZADƏ KÜÇƏSİ, EV 25",
+        "ŞV Seriyası ve Numarası": "AA4196358",
+        "FİN Kod": "6VD6MB3"
+    },
+    "aile_terkibi": [],
+    "mehkeme_result": "Qeydiyyatda olan məhkəmə işi tapılmamışdır.",
+    "cinayet_result": "Cinayət tərkib məkhəməsi yoxdur",
+    "inzibati_result": "Inzibati tərkib məkhəməsi yoxdur"
+}

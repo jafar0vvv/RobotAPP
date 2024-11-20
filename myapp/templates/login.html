@@ -3,14 +3,14 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Giriş Yap</title>
+    <title>Giriş Et</title>
 </head>
 <body>
-    <h2>Giriş Yap</h2>
+    <h2>Giriş Et</h2>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Giriş Yap</button>
+        <button type="submit">Giriş Et</button>
     </form>
     <p>
         {% if messages %}

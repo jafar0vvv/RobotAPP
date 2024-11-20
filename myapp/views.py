@@ -21,11 +21,11 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('sorgulama')  # Giriş başarılı, sorgulama sayfasına yönlendir
+                return redirect('sorgulama')  
             else:
-                messages.error(request, 'Kullanıcı adı veya şifre yanlış.')
+                messages.error(request, 'Username veya parol sehvdir.')
         else:
-            messages.error(request, 'Geçersiz giriş bilgileri.')
+            messages.error(request, 'Uygunsuz giriş melumatlari.')
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
@@ -33,27 +33,27 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return redirect('login')  # Çıkış yaptıktan sonra login sayfasına yönlendir
-# Formu gösteren View
+    return redirect('login')  
+
 class FormView(View):
     def get(self, request):
-        form = SorgulamaForm()  # Formu oluştur
+        form = SorgulamaForm()  
         return render(request, 'sorgulama_form.html', {'form': form})
 
 
 
 class SorgulamaView(View):
     def post(self, request):
-        form = SorgulamaForm(request.POST)  # Form verilerini al
+        form = SorgulamaForm(request.POST)  
 
         if form.is_valid():
             user = request.user
             print(user)
-            # Kullanıcı doğrulama işlemi
+            
             if not user.is_authenticated:
-                # Eğer kullanıcı giriş yapmamışsa, login sayfasına yönlendir
-                return redirect('login')  # Login sayfasına yönlendirir
-            # Form geçerli ise, işlemlerinizi burada yapın
+                
+                return redirect('login')  
+            
             user_data = {
                 "kimlik_seri": form.cleaned_data['kimlik_seri'],
                 "kimlik_numarasi": form.cleaned_data['kimlik_numarasi'],
@@ -66,7 +66,7 @@ class SorgulamaView(View):
                 "phone_number": form.cleaned_data['phone_number']
             }
 
-            emlak_result = emlak_sorgulama(user_data)  # Celery görevini arka planda başlatır
+            emlak_result = emlak_sorgulama(user_data)  
             vergi_result = taxes_sorgulama(user_data)
             hesab_result = hesab_sorgulama(user_data)
             infocenter_result = infocenter_sorgulama(user_data)
@@ -75,14 +75,14 @@ class SorgulamaView(View):
             cinayet_result = cinayet_sorgulama(user_data)
             inzibati_result = inzibati_sorgulama(user_data)
             # voen_result = vergi_sorgulama(user_data)
-            json_file_path = os.path.join('data', f"{user_data['ad']}_{user_data['soyad']}_results.json")  # Proje dizinindeki dosya
+            json_file_path = os.path.join('data', f"{user_data['ad']}_{user_data['soyad']}_results.json") 
 
             try:
                 with open(json_file_path, 'r', encoding='utf-8') as file:
                     data = json.load(file)
 
 
-                taxes_info = data.get('taxes', {}).get('info', 'Bu bilgi mevcut deyil.')
+                taxes_info = data.get('taxes', {}).get('info', 'Bu melumat movcud deyil.')
                 infocenter_info = data.get('infocenter', [])
                 emlak_info = data.get('emlak', {})
                 aile_terkibi = data.get('aile_terkibi', [])
@@ -94,11 +94,11 @@ class SorgulamaView(View):
                 # cerime_info = data.get('payment_details', [])
 
                 
-                emlak_info['Ata_Adı'] = emlak_info.pop('Ata Adı', 'Bu bilgi mevcut deyil.')
-                emlak_info['Doğum_Tarihi'] = emlak_info.pop('Doğum Tarihi', 'Bu bilgi mevcut deyil.')
-                emlak_info['Qeydiyyat_Unvanı'] = emlak_info.pop('Qeydiyyat Ünvanı', 'Bu bilgi mevcut deyil.')
-                emlak_info['ŞV_Seriyası_ve_Numarası'] = emlak_info.pop('ŞV Seriyası ve Numarası', 'Bu bilgi mevcut deyil.')
-                emlak_info['FİN_Kod'] = emlak_info.pop('FİN Kod', 'Bu bilgi mevcut deyil.')
+                emlak_info['Ata_Adı'] = emlak_info.pop('Ata Adı', 'Bu melumat movcud deyil.')
+                emlak_info['Doğum_Tarihi'] = emlak_info.pop('Doğum Tarihi', 'Bu melumat movcud deyil.')
+                emlak_info['Qeydiyyat_Unvanı'] = emlak_info.pop('Qeydiyyat Ünvanı', 'Bu melumat movcud deyil.')
+                emlak_info['ŞV_Seriyası_ve_Numarası'] = emlak_info.pop('ŞV Seriyası ve Numarası', 'Bu melumat movcud deyil.')
+                emlak_info['FİN_Kod'] = emlak_info.pop('FİN Kod', 'Bu melumat movcud deyil.')
 
             except (json.JSONDecodeError, FileNotFoundError) as e:
                 taxes_info = "Veri alınamadı."
@@ -148,7 +148,7 @@ class SorgulamaView(View):
                 inzibati_result=inzibati_result,
                 # voen_result = voen_result
             )
-            # Sorgulama sonuçları sayfasına yönlendir
+           
             return render(request, 'sorgulama_sonuclari.html', context)
 
 

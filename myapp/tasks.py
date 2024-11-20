@@ -64,7 +64,7 @@ def save_results_to_json(data, user_data):
     with open(json_file, 'w', encoding='utf-8') as json_file:
         json.dump(data, json_file, ensure_ascii=False, indent=4)
 
-    print(f"{json_file} kaydedildi.")
+    print(f"{json_file} save.")
 
 def solve_recaptcha(driver):
     try:
@@ -76,7 +76,7 @@ def solve_recaptcha(driver):
         sitekey = "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-"
         return sitekey
     except Exception as e:
-        print(f"iframe yükleme hatası: {str(e)}")
+        print(f"iframe yuklenme xetasi: {str(e)}")
     finally:
         driver.switch_to.default_content()
     return None
@@ -107,7 +107,7 @@ def emlak_sorgulama(user_data):
             response = solver.recaptcha(sitekey=sitekey, url=web_eemlak)
 
             if "code" in response:
-                print(f'CAPTCHA Anahtarı: {response["code"]}')
+                print(f'CAPTCHA Key: {response["code"]}')
                 driver.execute_script("document.getElementById('g-recaptcha-response').value = '{}';".format(response["code"]))
                 
                 try:
@@ -115,48 +115,45 @@ def emlak_sorgulama(user_data):
                     daxil_ol_button.click()
                     print("Daxil ol butonuna tıklandı.")
 
-                    # Emlak bilgilerini almak için bekle
                     ad_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "Ad")]]/parent::div/following-sibling::div//input'))
                     )
                     ad = ad_element.get_attribute('value')
-                    print(f"Ad: {ad}")  # Ad değerini kontrol et
-
+                    print(f"Ad: {ad}")  
                     soyad_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "Soyad")]]/parent::div/following-sibling::div//input'))
                     )
                     soyad = soyad_element.get_attribute('value')
-                    print(f"Soyad: {soyad}")  # Soyad değerini kontrol et
-
+                    print(f"Soyad: {soyad}")  
                     ata_ad_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "Ata adı")]]/parent::div/following-sibling::div//input'))
                     )
                     ata_ad = ata_ad_element.get_attribute('value')
-                    print(f"Ata Adı: {ata_ad}")  # Ata Adı değerini kontrol et
+                    print(f"Ata Adı: {ata_ad}")  
 
                     dogum_tarihi_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "Doğum Tarixi")]]/parent::div/following-sibling::div//input'))
                     )
                     dogum_tarihi = dogum_tarihi_element.get_attribute('value')
-                    print(f"Doğum Tarihi: {dogum_tarihi}")  # Doğum Tarihi değerini kontrol et
+                    print(f"Doğum Tarihi: {dogum_tarihi}")  
 
                     qeydiyyat_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "Qeydiyyat ünvanı")]]/parent::div/following-sibling::div//input'))
                     )
                     qeydiyyat = qeydiyyat_element.get_attribute('value')
-                    print(f"Qeydiyyat Ünvanı: {qeydiyyat}")  # Qeydiyyat Ünvanı değerini kontrol et
+                    print(f"Qeydiyyat Ünvanı: {qeydiyyat}") 
 
                     sv_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "ŞV seriya və nömrəsi:")]]/parent::div/following-sibling::div//input'))
                     )
                     sv = sv_element.get_attribute('value')
-                    print(f"ŞV Seriyası ve Numarası: {sv}")  # ŞV Seriyası ve Numarası değerini kontrol et
+                    print(f"ŞV Seriyası ve Numarası: {sv}")  
 
                     fin_element = WebDriverWait(driver, 10).until(
                         EC.presence_of_element_located((By.XPATH, '//label[b[contains(text(), "FİN kod:")]]/parent::div/following-sibling::div//input'))
                     )
                     fin = fin_element.get_attribute('value')
-                    print(f"FİN Kod: {fin}")  # FİN Kod değerini kontrol et
+                    print(f"FİN Kod: {fin}")  
 
                     final_results["emlak"] = {
                         "Ad": ad,
@@ -169,7 +166,7 @@ def emlak_sorgulama(user_data):
                     }
                     print("Emlak bilgileri başarıyla alındı.")
 
-                    # final_results içeriğini kontrol et
+                    
                     print(f"Final Results: {final_results}")  
 
                     if final_results["emlak"]:
@@ -219,51 +216,45 @@ def taxes_sorgulama(user_data):
         result = result_section.text
 
         try:
-            final_results["taxes"] = json.loads(result)  # JSON formatındaysa sözlük olarak ekle
+            final_results["taxes"] = json.loads(result)  
         except json.JSONDecodeError:
-            final_results["taxes"] = {"info": result}  # JSON değilse, düz metin olarak ekle
+            final_results["taxes"] = {"info": result}  
 
-        print("Vergi bilgileri başarıyla alındı.")
+        print("Vergi melumatlari alindi.")
         
-        # Vergi bilgilerini JSON dosyasına kaydet
         save_results_to_json(final_results, user_data)
-        print("Vergi bilgileri JSON dosyasına kaydedildi.")
+        print("Vergi melumatlari yadda saxlanildi.")
 
         return final_results["taxes"]
 
     except Exception as e:
-        print(f"Vergi sorgulama hatası: {e}")
+        print(f"Vergi sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
 
 def aile_terkibi(daire_id, mentqe_id, soyad, secici_unvani,user_data):
-    """CAPTCHA çözümleme ve Davam et butonuna tıklama işlemini gerçekleştirir."""
+    
     options = uc.ChromeOptions()
     driver = uc.Chrome(options=options)
-    driver.set_window_size(250, 100)  # Yalnızca CAPTCHA alanını görecek şekilde ayar
-    driver.set_window_position(800, 400)   # Pencereyi ekranın istediğiniz bir konumuna yerleştirin.
-    final_results = {"aile_terkibi": []}  # Bu satır eklendi
+    driver.set_window_size(250, 100)  
+    driver.set_window_position(800, 400)   
+    final_results = {"aile_terkibi": []}  
 
     try:
         driver.get(f"https://www.infocenter.gov.az/page/voters/?s={daire_id}&sm={mentqe_id}")
-        print(f"{daire_id} ve {mentqe_id} ile yeni sayfaya geçiliyor...")
+        print(f"{daire_id} ve {mentqe_id} ile yeni seyfeye kecilir ...")
 
-        # Sayfanın tamamen yüklendiğinden emin ol
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        print("Yeni sayfa yüklendi.")
+        print("Yeni seyfe yuklenir.")
 
-        # CAPTCHA'yı çözmeniz için bilgilendirme
-        print("Lütfen CAPTCHA'yı çözün ve ardından 'Davam et' butonuna tıklayın.")
+        print("Captchani kecib enter basin ")
 
-        # CAPTCHA'nın çözülmesi için bekleme zamanı
-        # Bu sırada butona kendiniz tıklayacaksınız
         WebDriverWait(driver, 300).until_not(EC.visibility_of_element_located((By.XPATH, "//span[text()='Davam et']")))
-        print("Davam et butonuna tıklama algılandı, işlemler devam ediyor...")
+        print("Davam et butonuna click olundu, prosess devam edir ...")
 
-        # Sonuç tablosunun yüklenmesini bekle
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH, '//tbody/tr')))
-        print("Sonuç tablosu yüklendi.")
+        print("Result table yuklendi .")
 
         new_data = []
         rows = driver.find_elements(By.XPATH, '//tr[contains(@align, "center")]')
@@ -271,13 +262,13 @@ def aile_terkibi(daire_id, mentqe_id, soyad, secici_unvani,user_data):
         soyad_prefix = soyad[:3].upper()
         secici_unvani_prefix = secici_unvani.rsplit(",", 1)[0].strip()
 
-        print("İlk 3 harfli soyad:", soyad_prefix)
-        print("Virgülden önceki unvan:", secici_unvani_prefix)
+        print("İlk 3 herfli soyad:", soyad_prefix)
+        print("Vergulden qabag  unvan:", secici_unvani_prefix)
 
         for row in rows:
             columns = row.find_elements(By.TAG_NAME, "td")
             if columns:
-                secici_ad_soyad = columns[2].text.strip()  # Ad soyadı 0. sütunda
+                secici_ad_soyad = columns[2].text.strip()  
                 if secici_ad_soyad.startswith(soyad_prefix) and columns[3].text.strip().startswith(secici_unvani_prefix):
                     data = {
                         "dairenin_kodu": columns[0].text.strip(),
@@ -287,23 +278,23 @@ def aile_terkibi(daire_id, mentqe_id, soyad, secici_unvani,user_data):
                         "tevellud": columns[4].text.strip(),
                     }
                     new_data.append(data)
-                    final_results["aile_terkibi"].append(data)  # aile_terkibi sonuçlarına ekleme
+                    final_results["aile_terkibi"].append(data)  
 
         if new_data:
-            save_results_to_json(final_results,user_data)  # user_data gerek yok
-            print("Yeni veriler başarıyla kaydedildi.")
+            save_results_to_json(final_results,user_data)  
+            print("Yeni melumatlar save olundu.")
             print(new_data)
         else:
             print("Searching failed: No results found.")
 
     except Exception as e:
-        print(f"Aile terkibi sorgulama hatası: {e}")
+        print(f"Aile terkibi sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
-# JSON'a yazmak için kullanılacak fonksiyon
+
 def infocenter_sorgulama(user_data):
-    """İnfocenter sorgulama işlemini gerçekleştirir."""
+    
     options = uc.ChromeOptions()
     # options.add_argument('--headless')
     driver = uc.Chrome(options=options)
@@ -358,7 +349,7 @@ def infocenter_sorgulama(user_data):
 
         if final_results["infocenter"]:
             save_results_to_json(final_results, user_data)
-            print("Infocenter bilgileri JSON dosyasına kaydedildi.")
+            print("Infocenter melumatlari JSON faylina yazildi .")
 
         if rows:
             first_row_columns = rows[1].find_elements(By.TAG_NAME, "td")
@@ -370,11 +361,11 @@ def infocenter_sorgulama(user_data):
 
                 aile_terkibi(daire_id, mentqe_id, soyad, secici_unvani, user_data)
             else:
-                print("Beklenenden az sütun mevcut. İlk satırda veri eksikliği olabilir.")
+                print("Gozlenenden az sutun. Ilk setirde data az ola biler .")
         else:
-            print("Infocenter'da sonuç bulunamadı.")
+            print("Infocenter'da melumat tapilmadi.")
     except Exception as e:
-        print(f"Infocenter sorgulama hatası: {e}")
+        print(f"Infocenter sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
@@ -382,7 +373,7 @@ def infocenter_sorgulama(user_data):
 
 def hesab_sorgulama(user_data):
     options = uc.ChromeOptions()
-    options.add_argument('--headless')  # Headless (görünmez) mod
+    options.add_argument('--headless')  
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     
@@ -392,58 +383,58 @@ def hesab_sorgulama(user_data):
     final_results = {}
 
     try:
-        # Telefon numarasını bul ve bir değer gir
+        
         number_input = WebDriverWait(driver, 60).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "input[name='number']"))
         )
-        number_input.send_keys(user_data["phone_number"])  # Telefon numarasını gir
+        number_input.send_keys(user_data["phone_number"])  
 
-        # "Davam et" butonunu bul ve tıkla
+        
         continue_button = WebDriverWait(driver, 60).until(
             EC.element_to_be_clickable((By.ID, "generalrabita_parametrs"))
         )
         continue_button.click()
 
-        # Abonent isimlerini alma
+        
         abonent_name_elements = WebDriverWait(driver, 60).until(
             EC.presence_of_all_elements_located((By.XPATH, "//li[@class='label-part ng-star-inserted']//span"))
         )
         abonent_names = [element.text.strip() for element in abonent_name_elements if element.text.strip()]  # Boş isimleri filtrele
-        final_results["abonent_names"] = abonent_names  # Sonuçlara ekle
+        final_results["abonent_names"] = abonent_names  
 
-        # Abonent isimlerini yazdır
+        
         for name in abonent_names:
-            print(f"Abonent: {name}")  # Abonent ismini yazdır
+            print(f"Abonent: {name}") 
 
-        print("Abonent adları alındı:", abonent_names)
+        print("Abonent adları goturuldu:", abonent_names)
         if abonent_names:
             save_results_to_json(final_results, user_data)
-            print("Abonent bilgileri JSON dosyasına kaydedildi.")
+            print("Abonent melumatlari JSON faylina yazildi ")
         return final_results
     except Exception as e:
-        print(f"Hesab sorgulama hatası: {e}")
+        print(f"Hesab sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
 
 def search_in_e_mehkeme(user_data):
     options = uc.ChromeOptions()
-    options.add_argument('--headless')  # Tarayıcıyı görünmez çalıştırır
-    options.add_argument('--disable-gpu')  # GPU'yu devre dışı bırakır, bazı sistemlerde headless modda gerekli
-    options.add_argument('--no-sandbox')  # Daha kararlı çalışması için
-    options.add_argument('--disable-dev-shm-usage')  # Paylaşılan hafızayı devre dışı bırakır, özellikle Linux için
+    options.add_argument('--headless')  
+    options.add_argument('--disable-gpu')  
+    options.add_argument('--no-sandbox')  
+    options.add_argument('--disable-dev-shm-usage')  
 
     driver = uc.Chrome(options=options)
-    driver.get("https://example.com")  # URL doğru olmalı
+    driver.get("https://example.com")  
 
     try:
-        # Axtarış butonuna tıklama
+        
         search_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.ID, "PublicSearch"))
         )
         search_button.click()
 
-        # FIN kodu giriş alanını doldurma
+        
         if user_data.get("fin_kod"):
             try:
                 fin_input = WebDriverWait(driver, 20).until(
@@ -459,13 +450,13 @@ def search_in_e_mehkeme(user_data):
                 fin_input.clear()
                 fin_input.send_keys(user_data["fin_kod"])
 
-        # Axtar butonuna tıklama
+        
         axtar_button = WebDriverWait(driver, 20).until(
             EC.element_to_be_clickable((By.ID, "btnSearch"))
         )
         axtar_button.click()
 
-        # Sonuçların yüklenmesini bekleme
+        
         result_element = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, "//div[@class='pagination-container']//a"))
         )
@@ -474,26 +465,26 @@ def search_in_e_mehkeme(user_data):
         if "(0 iş)" in result_text:
             result_message = "Qeydiyyatda olan məhkəmə işi tapılmamışdır."
         else:
-            # Tabloyu bekleyelim
+            
             case_table = WebDriverWait(driver, 20).until(
                 EC.presence_of_element_located((By.ID, "Cases"))
             )
 
-            # Tabloyu kontrol et ve satırları al
-            rows = case_table.find_elements(By.TAG_NAME, "tr")[1:]  # Başlık satırını atla
+            
+            rows = case_table.find_elements(By.TAG_NAME, "tr")[1:]  
 
-            if not rows:  # Satırlar boşsa hata mesajı ver
+            if not rows:  
                 print("No rows found in the case table.")
-                return {"error": "Tabloda veri bulunamadı."}
+                return {"error": "Tabloda data tapilmadi ."}
 
             case_details = []
             for row in rows:
                 columns = row.find_elements(By.TAG_NAME, "td")
 
-                # Yeterli hücre olup olmadığını kontrol et
-                if len(columns) < 6:  # Satırda 6 hücre bekliyoruz
-                    print("Satırda yeterli hücre bulunamadı:", row.text)
-                    continue  # Bu satırı atla
+                
+                if len(columns) < 6:  
+                    print("Setirde lazim qeder data yoxdur :", row.text)
+                    continue  
 
                 case_info = {
                     "işin nömrəsi": columns[0].text.strip(),
@@ -506,24 +497,24 @@ def search_in_e_mehkeme(user_data):
                 case_details.append(case_info)
             result_message = case_details
 
-        # Sonuçları JSON'a kaydet
+        
         final_results = {"mehkeme_result": result_message}
         save_results_to_json(final_results, user_data)
         return result_message
 
     except TimeoutException as e:
-        print("Sayfa yüklenemedi veya sonuç bulunamadı:", e)
-        return {"error": "Sayfa yüklenemedi veya sonuç bulunamadı."}
+        print("Seyfe yuklenmedi ve ya xetali:", e)
+        return {"error": "Seyfe yuklenmedi ve ya xetali."}
 
     except ElementNotInteractableException as e:
-        print("Elementle etkileşim kurulamadı:", e)
-        return {"error": "Elementle etkileşim kurulamadı."}
+        print("Elemete cata bilmedim:", e)
+        return {"error": "Elemente cata bilmedim ."}
 
     finally:
         driver.quit()
 def clean_result_text(result_text):
     if "(" in result_text and ")" in result_text:
-        return result_text.split("(")[0].strip()  # Parantezden önceki kısmı döndür
+        return result_text.split("(")[0].strip()  
     return result_text.strip() 
 
 
@@ -539,56 +530,56 @@ def asanpay_sorgulama(user_data):
     final_results = {}
 
     try:
-        # "Daxili İşlər Nazirliyi" seçeneğine tıklama
+    
         din_element = WebDriverWait(driver, 60).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "nav.text-center.m-auto"))
         )
         din_element.click()
 
-        # "FİN və seriya nömrəsi ilə axtarış" seçeneğine tıklama
+       
         search_option = WebDriverWait(driver, 60).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "li.select2-results__option--highlighted"))
         )
         search_option.click()
 
-        # FIN numarasını girme
+        
         fin_input = WebDriverWait(driver, 60).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "input[name='pin']"))
         )
-        fin_input.send_keys(user_data["fin"])  # Formdan gelen FIN numarasını gir
+        fin_input.send_keys(user_data["fin"])  
 
-        # "Axtar" butonuna tıklama
+        
         search_button = WebDriverWait(driver, 60).until(
             EC.element_to_be_clickable((By.ID, "searchPaymentByIdentificationType"))
         )
         search_button.click()
 
-        # Sayfadan gerekli bilgileri alma
+        
         payment_elements = WebDriverWait(driver, 60).until(
             EC.presence_of_all_elements_located((By.CSS_SELECTOR, "li.list-group-item"))
         )
 
-        # Ödeme detaylarını alma
+        
         payment_details = {}
         for element in payment_elements:
             label = element.find_element(By.TAG_NAME, "h6").text.strip()
             value = element.find_element(By.CLASS_NAME, "mb-0").text.strip()
             payment_details[label] = value
         
-        final_results["payment_details"] = payment_details  # Sonuçlara ekle
+        final_results["payment_details"] = payment_details  
 
-        # Ödeme detaylarını yazdır
+        
         for label, value in payment_details.items():
             print(f"{label} {value}")
 
-        print("Ödeme detayları alındı:", payment_details)
+        print("Odenish melumatlari alindi:", payment_details)
         if payment_details:
             save_results_to_json(final_results, user_data)
-            print("Abonent bilgileri JSON dosyasına kaydedildi.")
+            print("Abonen melumati JSON faylina yazilib.")
         return final_results
 
     except Exception as e:
-        print(f"Asanpay sorgulama hatası: {e}")
+        print(f"Asanpay sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
@@ -599,7 +590,7 @@ def cinayet_sorgulama(user_data):
     driver.get("https://sc.supremecourt.gov.az/job/search/1")
     
     try:
-        # Soyad, Ad, ve Ata adı alanlarını doldur
+        
         soyad_input = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "search_adv_form_first_name"))
         )
@@ -618,49 +609,49 @@ def cinayet_sorgulama(user_data):
         ata_adi_input.send_keys(user_data["ata_adi"])
         print("Ata adı girildi.")
 
-        # 'Axtar' butonuna tıklama
+        
         axtar_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn.btn-info.pull-right"))
         )
         axtar_button.click()
         print("Axtar butonuna tıklandı.")
 
-        # Sonuçları bekleyin ve "Tapılmadı" kontrolünü yapın
+        
         try:
             not_found_message = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.XPATH, "//p[@align='center' and contains(text(), 'Tapılmadı')]"))
             )
-            print("Tapılmadı mesajı bulundu.")
+            print("Tapılmadı mesajı tapildi.")
         except:
-            # Tapılmadı mesajı yoksa diğer sonuçları alın
+            
             result_section = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.CLASS_NAME, "col-md-9"))
             )
             result_text = result_section.text
             result_text = "Cinayət tərkib məkhəməsi yoxdur"
-            print("Sonuç bilgileri alındı:", result_text)
+            print("Yekun melumatlar alındı:", result_text)
 
-        # Sonucu JSON olarak kaydet
+        
         final_results = {"cinayet_result": result_text}
         save_results_to_json(final_results, user_data)
-        print("Sonuçlar JSON dosyasına kaydedildi.")
+        print("Neticeler JSON faylina yazildi .")
 
         return final_results["cinayet_result"]
 
     except Exception as e:
-        print(f"Supreme Court sorgulama hatası: {e}")
+        print(f"Supreme Court sorgulama xetasi: {e}")
     finally:
         driver.quit()
 
 
 def inzibati_sorgulama(user_data):
     options = webdriver.ChromeOptions()
-    options.add_argument('--headless')  # Tarayıcıyı başlatmadan çalıştırmak için
+    options.add_argument('--headless')  
     driver = webdriver.Chrome(options=options)
     driver.get("https://sc.supremecourt.gov.az/job/search/2-1")
 
     try:
-        # Soyad, Ad, ve Ata adı alanlarını doldur
+        
         soyad_input = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.ID, "search_adv_form_first_name"))
         )
@@ -681,33 +672,33 @@ def inzibati_sorgulama(user_data):
 
 
 
-        # 'Axtar' butonuna tıklama
+        
         axtar_button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "button.btn.btn-info.pull-right"))
         )
         axtar_button.click()
-        print("Axtar butonuna tıklandı.")
+        print("Axtar butonuna clicklendi.")
 
-        # Sonuçları bekleyin ve "Tapılmadı" kontrolünü yapın
+        
         try:
             not_found_message = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.XPATH, "//p[@align='center' and contains(text(), 'Tapılmadı')]"))
             )
-            print("Tapılmadı mesajı bulundu.")
+            print("Tapılmadı mesajı goruldu.")
         except:
-            # Tapılmadı mesajı yoksa diğer sonuçları alın
+            
             result_section = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.CLASS_NAME, "col-md-9"))
             )
             result_text = result_section.text
             result_text = "Inzibati tərkib məkhəməsi yoxdur"
 
-            print("Sonuç bilgileri alındı:", result_text)
+            print("Yekun Melumatlar alındı:", result_text)
 
-        # Sonucu JSON olarak kaydet
+        
         final_results = {"inzibati_result": result_text}
         save_results_to_json(final_results, user_data)
-        print("Sonuçlar JSON dosyasına kaydedildi.")
+        print("Yekun JSON faylina yazildi.")
 
         return final_results["inzibati_result"]
 
@@ -720,17 +711,17 @@ def main(form_data):
     user_data = get_user_data(form_data)
     final_results = {}
     
-    # Sorgulama işlemleri
+    
     final_results["emlak"] = emlak_sorgulama(user_data)
     final_results["taxes"] = taxes_sorgulama(user_data)
     final_results["infocenter"] = infocenter_sorgulama(user_data)
     final_results["aile_terkibi"] = aile_terkibi(user_data)
     final_results["abonent_name"] = hesab_sorgulama(user_data)
-    # Sonuçları JSON dosyasına kaydet
-    save_results_to_json(final_results, user_data)  # Sıralama düzeltildi
+    
+    save_results_to_json(final_results, user_data)  
     
 if __name__ == "__main__":
-    form_data = {}  # Burada gerçek form verilerini geçin
+    form_data = {}  
     main(form_data)
 
 

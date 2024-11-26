@@ -425,7 +425,7 @@ def search_in_e_mehkeme(user_data):
     options.add_argument('--disable-dev-shm-usage')  
 
     driver = uc.Chrome(options=options)
-    driver.get("https://example.com")  
+    driver.get(web_e_mehkeme)  
 
     try:
         
